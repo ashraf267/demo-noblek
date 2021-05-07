@@ -112,7 +112,7 @@ void demo({int x}) {
         case 13:
           {
             print(txt1);
-            String exp1 = numbers[x - 10]; // exception 1
+            String exp1 = numbers[x - 10]; // exception 1 - method 1
             exp1 = 'Thir';
             print(txt2 + ' ' + exp1 + suffix1);
           }
@@ -128,8 +128,9 @@ void demo({int x}) {
             print(txt1);
             print(txt2 +
                 ' ' +
-                numbers[x - 10].substring(0, 3) +
-                suffix1); // exception 2
+                numbers[x - 10].substring(0, 2) +
+                'f' +
+                suffix1); // exception 2 - method 2
           }
           break;
         case 16:
@@ -150,7 +151,7 @@ void demo({int x}) {
             print(txt2 +
                 ' ' +
                 numbers[x - 10].substring(0, 4) +
-                suffix1); // ecxeption 3
+                suffix1); // exception 3 - method 3
           }
           break;
         default:
