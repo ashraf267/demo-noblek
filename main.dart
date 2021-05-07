@@ -126,9 +126,10 @@ void demo({int x}) {
         case 15:
           {
             print(txt1);
-            String exp2 = numbers[x - 10];
-            exp2 = 'Fif'; // exception 2
-            print(txt2 + ' ' + exp2 + suffix1);
+            print(txt2 +
+                ' ' +
+                numbers[x - 10].substring(0, 3) +
+                suffix1); // exception 2
           }
           break;
         case 16:
@@ -146,7 +147,10 @@ void demo({int x}) {
         case 18:
           {
             print(txt1);
-            print(txt2 + ' ' + numbers[x - 10].substring(0, 4) + suffix1);
+            print(txt2 +
+                ' ' +
+                numbers[x - 10].substring(0, 4) +
+                suffix1); // ecxeption 3
           }
           break;
         default:
