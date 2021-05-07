@@ -146,7 +146,7 @@ void demo({int x}) {
         case 18:
           {
             print(txt1);
-            print(txt2 + ' ' + numbers[x - 10] + suffix1);
+            print(txt2 + ' ' + numbers[x - 10].substring(0, 4) + suffix1);
           }
           break;
         default:
