@@ -2,7 +2,7 @@ import 'dart:math';
 
 void main() {
   // call the function
-  demo(x: Random().nextInt(20)); // random no from 0 - 99
+  demo(x: Random().nextInt(100)); // random no from 0 - 99
 }
 
 void demo({int x}) {
@@ -25,6 +25,7 @@ void demo({int x}) {
   String suffix2 = 'ty'; // thirty
   String txt1 = 'Your random no is: $x';
   String txt2 = 'Your random no in words is:';
+  String y = x.toString(); // x twin
   if (x < 20) {
     // true
     if (x <= 12) {
@@ -166,5 +167,120 @@ void demo({int x}) {
   } else {
     // false
     // x > 20
+    if (x.toString().substring(0) == y.substring(0)) {
+      switch (int.parse(y.substring(1))) {
+        case 0:
+          {
+            print(txt1);
+            print(txt2 +
+                ' ' +
+                numbers[int.parse(y.substring(0, 1))] +
+                suffix2 +
+                '-' +
+                'zero');
+          }
+          break;
+        case 1:
+          {
+            print(txt1);
+            print(txt2 +
+                ' ' +
+                numbers[int.parse(y.substring(0, 1))] +
+                suffix2 +
+                '-' +
+                'one');
+          }
+          break;
+        case 2:
+          {
+            print(txt1);
+            print(txt2 +
+                ' ' +
+                numbers[int.parse(y.substring(0, 1))] +
+                suffix2 +
+                '-' +
+                'two');
+          }
+          break;
+        case 3:
+          {
+            print(txt1);
+            print(txt2 +
+                ' ' +
+                numbers[int.parse(y.substring(0, 1))] +
+                suffix2 +
+                '-' +
+                'three');
+          }
+          break;
+        case 4:
+          {
+            print(txt1);
+            print(txt2 +
+                ' ' +
+                numbers[int.parse(y.substring(0, 1))] +
+                suffix2 +
+                '-' +
+                'four');
+          }
+          break;
+        case 5:
+          {
+            print(txt1);
+            print(txt2 +
+                ' ' +
+                numbers[int.parse(y.substring(0, 1))] +
+                suffix2 +
+                '-' +
+                'five');
+          }
+          break;
+        case 6:
+          {
+            print(txt1);
+            print(txt2 +
+                ' ' +
+                numbers[int.parse(y.substring(0, 1))] +
+                suffix2 +
+                '-' +
+                'six');
+          }
+          break;
+        case 7:
+          {
+            print(txt1);
+            print(txt2 +
+                ' ' +
+                numbers[int.parse(y.substring(0, 1))] +
+                suffix2 +
+                '-' +
+                'seven');
+          }
+          break;
+        case 8:
+          {
+            print(txt1);
+            print(txt2 +
+                ' ' +
+                numbers[int.parse(y.substring(0, 1))] +
+                suffix2 +
+                '-' +
+                'eight');
+          }
+          break;
+        default:
+          {
+            // y.substring(1) == 9
+            print(txt1);
+            print(txt2 +
+                ' ' +
+                numbers[int.parse(y.substring(0, 1))] +
+                suffix2 +
+                '-' +
+                'nine');
+          }
+          break;
+      }
+    }
   }
 }
