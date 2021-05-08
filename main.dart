@@ -113,9 +113,8 @@ void demo({int x}) {
         case 13:
           {
             print(txt1);
-            String exp1 = numbers[x - 10]; // exception 1 - method 1
-            exp1 = 'Thir';
-            print(txt2 + ' ' + exp1 + suffix1);
+            print(
+                txt2 + ' ' + numbers[x - 10].substring(0, 2) + 'ir' + suffix1);
           }
           break;
         case 14:
@@ -167,119 +166,144 @@ void demo({int x}) {
   } else {
     // false
     // x > 20
-    if (x.toString().substring(0) == y.substring(0)) {
-      switch (int.parse(y.substring(1))) {
-        case 0:
-          {
-            print(txt1);
-            print(txt2 +
-                ' ' +
-                numbers[int.parse(y.substring(0, 1))] +
-                suffix2 +
-                '-' +
-                'zero');
-          }
-          break;
-        case 1:
-          {
-            print(txt1);
-            print(txt2 +
-                ' ' +
-                numbers[int.parse(y.substring(0, 1))] +
-                suffix2 +
-                '-' +
-                'one');
-          }
-          break;
-        case 2:
-          {
-            print(txt1);
-            print(txt2 +
-                ' ' +
-                numbers[int.parse(y.substring(0, 1))] +
-                suffix2 +
-                '-' +
-                'two');
-          }
-          break;
-        case 3:
-          {
-            print(txt1);
-            print(txt2 +
-                ' ' +
-                numbers[int.parse(y.substring(0, 1))] +
-                suffix2 +
-                '-' +
-                'three');
-          }
-          break;
-        case 4:
-          {
-            print(txt1);
-            print(txt2 +
-                ' ' +
-                numbers[int.parse(y.substring(0, 1))] +
-                suffix2 +
-                '-' +
-                'four');
-          }
-          break;
-        case 5:
-          {
-            print(txt1);
-            print(txt2 +
-                ' ' +
-                numbers[int.parse(y.substring(0, 1))] +
-                suffix2 +
-                '-' +
-                'five');
-          }
-          break;
-        case 6:
-          {
-            print(txt1);
-            print(txt2 +
-                ' ' +
-                numbers[int.parse(y.substring(0, 1))] +
-                suffix2 +
-                '-' +
-                'six');
-          }
-          break;
-        case 7:
-          {
-            print(txt1);
-            print(txt2 +
-                ' ' +
-                numbers[int.parse(y.substring(0, 1))] +
-                suffix2 +
-                '-' +
-                'seven');
-          }
-          break;
-        case 8:
-          {
-            print(txt1);
-            print(txt2 +
-                ' ' +
-                numbers[int.parse(y.substring(0, 1))] +
-                suffix2 +
-                '-' +
-                'eight');
-          }
-          break;
-        default:
-          {
-            // y.substring(1) == 9
-            print(txt1);
-            print(txt2 +
-                ' ' +
-                numbers[int.parse(y.substring(0, 1))] +
-                suffix2 +
-                '-' +
-                'nine');
-          }
-          break;
+    if (x.toString().substring(0, 1) == y.substring(0, 1)) {
+      if (int.parse(y.substring(0, 1)) == 3 && int.parse(y.substring(1)) == 0 ||
+          int.parse(y.substring(0, 1)) == 5 && int.parse(y.substring(1)) == 0) {
+        // true
+        switch (int.parse(y.substring(0, 1))) {
+          case 3:
+            {
+              print(txt1);
+              print(txt2 +
+                  ' ' +
+                  numbers[int.parse(y.substring(0, 1))].substring(0, 2) +
+                  'ir' +
+                  suffix2);
+            }
+            break;
+          default:
+            {
+              // int.parse(y.substring(0, 1)) == 5
+              print(txt1);
+              print(txt2 +
+                  ' ' +
+                  numbers[int.parse(y.substring(0, 1))].substring(0, 2) +
+                  'f' +
+                  suffix2);
+            }
+            break;
+        }
+      } else {
+        // false
+        switch (int.parse(y.substring(1))) {
+          case 0:
+            {
+              print(txt1);
+              print(
+                  txt2 + ' ' + numbers[int.parse(y.substring(0, 1))] + suffix2);
+            }
+            break;
+          case 1:
+            {
+              print(txt1);
+              print(txt2 +
+                  ' ' +
+                  numbers[int.parse(y.substring(0, 1))] +
+                  suffix2 +
+                  '-' +
+                  'one');
+            }
+            break;
+          case 2:
+            {
+              print(txt1);
+              print(txt2 +
+                  ' ' +
+                  numbers[int.parse(y.substring(0, 1))] +
+                  suffix2 +
+                  '-' +
+                  'two');
+            }
+            break;
+          case 3:
+            {
+              print(txt1);
+              print(txt2 +
+                  ' ' +
+                  numbers[int.parse(y.substring(0, 1))] +
+                  suffix2 +
+                  '-' +
+                  'three');
+            }
+            break;
+          case 4:
+            {
+              print(txt1);
+              print(txt2 +
+                  ' ' +
+                  numbers[int.parse(y.substring(0, 1))] +
+                  suffix2 +
+                  '-' +
+                  'four');
+            }
+            break;
+          case 5:
+            {
+              print(txt1);
+              print(txt2 +
+                  ' ' +
+                  numbers[int.parse(y.substring(0, 1))] +
+                  suffix2 +
+                  '-' +
+                  'five');
+            }
+            break;
+          case 6:
+            {
+              print(txt1);
+              print(txt2 +
+                  ' ' +
+                  numbers[int.parse(y.substring(0, 1))] +
+                  suffix2 +
+                  '-' +
+                  'six');
+            }
+            break;
+          case 7:
+            {
+              print(txt1);
+              print(txt2 +
+                  ' ' +
+                  numbers[int.parse(y.substring(0, 1))] +
+                  suffix2 +
+                  '-' +
+                  'seven');
+            }
+            break;
+          case 8:
+            {
+              print(txt1);
+              print(txt2 +
+                  ' ' +
+                  numbers[int.parse(y.substring(0, 1))] +
+                  suffix2 +
+                  '-' +
+                  'eight');
+            }
+            break;
+          default:
+            {
+              // y.substring(1) == 9
+              print(txt1);
+              print(txt2 +
+                  ' ' +
+                  numbers[int.parse(y.substring(0, 1))] +
+                  suffix2 +
+                  '-' +
+                  'nine');
+            }
+            break;
+        }
       }
     }
   }
