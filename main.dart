@@ -2,8 +2,7 @@ import 'dart:math';
 
 void main() {
   // call the function
-  // demo(x: Random().nextInt(100)); // random no from 0 - 99
-  demo(x: 80);
+  demo(x: Random().nextInt(100)); // random no from 0 - 99
   // Bugs to fix next:
   // 2 - Twoty-seven - fixed
   // 8 - Eightty-eight - fixed
@@ -172,7 +171,10 @@ void demo({int x}) {
   } else {
     // false
     // x > 20
-    if (x.toString().substring(0, 1) == y.substring(0, 1)) {
+    if (int.parse(y.substring(0, 1)) == 2 ||
+        int.parse(y.substring(0, 1)) == 3 ||
+        int.parse(y.substring(0, 1)) == 5 ||
+        int.parse(y.substring(0, 1)) == 8) {
       switch (int.parse(y.substring(0, 1))) {
         case 2:
           {
