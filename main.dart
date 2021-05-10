@@ -3,11 +3,6 @@ import 'dart:math';
 void main() {
   // call the function
   demo(x: Random().nextInt(100)); // random no from 0 - 99
-  // Bugs to fix next:
-  // 2 - Twoty-seven - fixed
-  // 8 - Eightty-eight - fixed
-  // 5 - Fivety-four - fixed
-  // 3 - Threety-five - fixed
 }
 
 void demo({int x}) {
